@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Results</title>
+</head>
+<body>
+    <h1>Sample Results</h1>
+
+    <form action="{% url 'sample_simple_random' %}" method="get">
+        <button type="submit">Simple Random Sampling</button>
+    </form>
+
+    <form action="{% url 'sample_interval' %}" method="get">
+        <button type="submit">Interval Sampling</button>
+    </form>
+
+    <form action="{% url 'sample_stratified' %}" method="get">
+        <button type="submit">Stratified Sampling</button>
+    </form>
+
+    {% if simple_tsv %}
+    <h2>{{ chart_title }}</h2>
+    <img src="data:image/png;base64,{{ chart }}" alt="Chart">
+    <pre>{{ simple_tsv }}</pre>
+    {% endif %}
+
+    {% if interval_tsv %}
+    <h2>{{ chart_title }}</h2>
+    <img src="data:image/png;base64,{{ chart }}" alt="Chart">
+    <pre>{{ interval_tsv }}</pre>
+    {% endif %}
+
+    {% if stratified_tsv %}
+    <h2>{{ chart_title }}</h2>
+    <img src="data:image/png;base64,{{ chart }}" alt="Chart">
+    <pre>{{ stratified_tsv }}</pre>
+    {% endif %}
+</body>
+</html>
