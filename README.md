@@ -4,6 +4,7 @@ GPT-2 (Generative Pretrained Transformer 2): is a large-scale, transformer-based
 Pegasus (Pre-training with Extracted Gap-sentences for Abstractive Summarization): is specifically designed for abstractive text summarisation by pre-training on a gap-sentence generation target. 
 
 Usage Of Summy
+
 Settings page where the user can make choices regarding the use of the relevant summarization system. 
 This page allows the user to select one or many sources, title selection and subtitle selection. 
 As the title is selected, subheadings related to that title are dynamically retrieved from the database via AJAX and dynamically displayed according to the sub-title selection.
